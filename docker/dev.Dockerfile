@@ -13,7 +13,7 @@ RUN apk add --no-cache --virtual .build-deps \
     && chmod +x /usr/bin/mc \
     && pip install --upgrade pip setuptools wheel \
     && pip install cython \
-    && pip install -r https://raw.githubusercontent.com/YaoShuwei/nas-tools-unlock/dev/requirements.txt \
+    && pip install -r https://raw.githubusercontent.com/anpple/nas-tools-unlock/dev/requirements.txt \
     && apk del --purge .build-deps \
     && rm -rf /tmp/* /root/.cache /var/cache/apk/*
 COPY --chmod=755 ./rootfs /
@@ -33,7 +33,7 @@ ENV S6_SERVICES_GRACETIME=30000 \
     NASTOOL_CN_UPDATE=true \
     NASTOOL_VERSION=dev \
     PS1="\u@\h:\w \$ " \
-    REPO_URL="https://github.com/YaoShuwei/nas-tools-unlock.git" \
+    REPO_URL="https://github.com/anpplex/nas-tools-unlock.git" \
     PYPI_MIRROR="https://pypi.tuna.tsinghua.edu.cn/simple" \
     ALPINE_MIRROR="mirrors.ustc.edu.cn" \
     PUID=0 \
